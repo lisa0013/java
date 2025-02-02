@@ -6,8 +6,31 @@ package com.Yedam.reference;
 import java.util.Scanner;
 
 public class BookExe {
+	
+
 	// 1.전체목록 2.도서등록 3.조회(출판사) 9.종료
 	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		
+		Book 어린왕자 = new Book("사공웅","123","123",111);
+		어린왕자.setYear("2022");
+		어린왕자.getYear();
+		어린왕자.name= "사공웅";
+		
+		Book 백설공주 = new Book();
+		String name2 = 백설공주.name;
+		
+
+		
+		
+		
+		int[] as = new int[10];
+		as[0] = 1;
+		
 		Book[] bookRepository = new Book[100];
 		// 초기데이터.
 //		bookRepository[0] = new Book("이것이자바다","신용권","한빛미디어",30000);
@@ -15,7 +38,12 @@ public class BookExe {
 		bookRepository[0] = new Book("바나나", "원숭이", "동물의왕국", 18000);
 		bookRepository[1] = new Book("단무지", "김밥", "김밥천국", 15000);
 		bookRepository[2] = new Book("프로틴", "건강", "헬스케어", 32000);
-
+		
+		
+		
+		
+		
+		
 		Scanner scn = new Scanner(System.in);
 		boolean run = true;
 
