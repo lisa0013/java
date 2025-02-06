@@ -56,7 +56,7 @@ public class FriendExe {
 			if(friends[i] != null) {
 				if(friends[i] instanceof Friend) {
 					System.out.println("이름:"+friends[i].getFriendName());
-				} else if(friends[i] instanceof UnivFriend)
+				} else if(friends[i] instanceof UnivFriend
 			}
 		}
 	} // end of friendList().
