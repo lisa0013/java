@@ -1,6 +1,7 @@
 package com.Yedam.interfaces.emp;
 
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -14,7 +15,7 @@ public class MainExe {
 	static Scanner scn = new Scanner(System.in);
 	
 	// 컬렉션.
-	static EmpDAO dao = new EmpListExe();
+	static EmpDAO dao = new EmpDBExe();
 	
 	public static void main(String[] args) {
 		// run.
@@ -86,14 +87,17 @@ public class MainExe {
 
 			case 4: // 목록.
 				// 조회조건(급여 이상)
-				System.out.print("조회 급여조건>> ");
-				sal = Integer.parseInt(scn.nextLine());
+//				System.out.print("조회 급여조건>> ");
+//				sal = Integer.parseInt(scn.nextLine());
+				
+				System.out.print("사원 이름조건>> ");
+				eName = scn.nextLine();
 
 				Employee emp = new Employee();
-				emp.setSalary(sal);
-
+				emp.setEmpName(eName); // empName 필드 저장.
+//				emp.setSalary(sal); // salary 필드 : 저장.
 				// 조회결과.
-				Employee[] result = dao.search(emp);
+				List<Employee> result = dao.search(emp);
 				// 출력.
 				System.out.println("사번   이름    연락처    급여");
 				System.out.println("========================");

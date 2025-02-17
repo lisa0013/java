@@ -1,7 +1,10 @@
 package com.Yedam.interfaces.emp;
 
+import java.util.List;
+
 /*
  * 등록, 수정, 삭제, 조회. 
+ * EmpAryExe.java, 
  */
 public interface EmpDAO {
 
@@ -12,5 +15,5 @@ public interface EmpDAO {
 	// 삭제.
 	public boolean removeEmp(int empNo);
 	// 조회.
-	public Employee[] search(Employee emp);
+	public List<Employee> search(Employee emp);
 }
